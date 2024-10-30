@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: digest-tester
+spec:
+  containers:
+  - name: digest-tester
+    image: neajmorshad/digest-tester:latest
+    imagePullPolicy: Always
+    command: ["/bin/sh", "-c", "/digest-tester && tail -f /dev/null"]
+
